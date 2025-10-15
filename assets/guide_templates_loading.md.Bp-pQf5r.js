@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a}from"./chunks/framework.CUYNqCBt.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"guide/templates/loading.md","filePath":"guide/templates/loading.md"}'),o={name:"guide/templates/loading.md"};function n(s,r,d,i,c,l){return a(),t("div")}const _=e(o,[["render",n]]);export{m as __pageData,_ as default};
