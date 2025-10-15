@@ -1,0 +1,45 @@
+name: Deploy VitePress to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest # 使用 Ubuntu 环境
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # 确保获取完整历史（用于最后更新时间等功能）
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # 推荐使用 Node.js 18+
+          cache: "pnpm" # 缓存依赖，加速构建
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile # 等同于 npm ci，严格按照 lock 文件安装
+
+      - name: Build core package
+        run: pnpm build
+        
+      - name: Build VitePress
+        run: pnpm run docs:build # 对应 package.json 中的构建脚本
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }} # 自动生成的令牌，无需手动配置
+          publish_dir: packages/docs/.vitepress/dist # 构建后的文件目录
+          publish_branch: gh-pages # 部署到 gh-pages 分支（自动创建）

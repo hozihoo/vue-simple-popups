@@ -1,0 +1,33 @@
+{
+  "name": "vue-simple-popups-root",
+  "version": "1.0.1",
+  "description": "",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "pnpm dev & pnpm docs:dev",
+    "dev": "pnpm -F vue-simple-popups run dev",
+    "build": "pnpm -F vue-simple-popups run build",
+    "docs:dev": "pnpm -F docs run dev",
+    "docs:build": "pnpm -F docs run build",
+    "docs:preview": "pnpm -F docs run preview",
+    "clean": "node ./scripts/clean.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.18.3",
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "lucide-vue-next": "^0.544.0",
+    "sass": "^1.92.0",
+    "typescript": "^5.9.2",
+    "unocss": "^66.5.1",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4",
+    "vue": "^3.5.21"
+  }
+}

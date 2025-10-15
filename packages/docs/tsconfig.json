@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "composite": false,
+    "target": "ESNext",
+
+    "moduleDetection": "force",
+    "experimentalDecorators": true,
+    "module": "ESNext",
+
+    "resolveJsonModule": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "inlineSources": false,
+    "noEmit": true,
+    "removeComments": true,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true,
+
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "useDefineForClassFields": true,
+    "moduleResolution": "bundler",
+    "types": ["vite/client"],
+    "declaration": false,
+    "paths": {
+      "#/*": ["./src/_env/*"]
+    }
+  },
+  "include": [
+    ".vitepress/*.mts",
+    ".vitepress/**/*.ts",
+    ".vitepress/**/*.vue",
+    "src/*.mts",
+    "src/**/*.ts",
+    "src/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
+}

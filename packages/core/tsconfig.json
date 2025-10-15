@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "composite": false,
+    "target": "ESNext",
+
+    "moduleDetection": "force",
+    "experimentalDecorators": true,
+
+    "module": "ESNext",
+
+    "resolveJsonModule": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitThis": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+
+    "inlineSources": false,
+    "removeComments": true,
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "preserveWatchOutput": true,
+
+    "jsx": "preserve",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "useDefineForClassFields": true,
+    "moduleResolution": "bundler",
+    "declaration": true,
+    "declarationDir": "./dist",
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": ["vite/client", "vue"]
+  },
+  "include": ["src", "types", "templates"],
+  "exclude": ["node_modules", "dist"]
+}

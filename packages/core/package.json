@@ -1,0 +1,63 @@
+{
+  "name": "vue-simple-popups",
+  "version": "1.0.3",
+  "description": "Lightweight & Efficient Vue 3 Popup Component Library",
+  "type": "module",
+  "main": "./dist/vue-simple-popups.cjs.js",
+  "module": "./dist/vue-simple-popups.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-simple-popups.es.js",
+      "require": "./dist/vue-simple-popups.cjs.js"
+    },
+    "./templates": {
+      "types": "./dist/templates/index.d.ts",
+      "import": "./dist/templates.es.js",
+      "require": "./dist/templates.cjs.js"
+    },
+    "./assets/index.css": "./dist/assets/index.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch"
+  },
+  "keywords": [
+    "Vue3",
+    "vue",
+    "popup",
+    "popups",
+    "modal",
+    "dialog",
+    "drawer",
+    "loading",
+    "toast",
+    "message",
+    "alert",
+    "notification",
+    "captcha",
+    "vue-component",
+    "vue3-component",
+    "lightweight",
+    "typescript",
+    "popup-library",
+    "vue simple popups"
+  ],
+  "author": "hozihoo",
+  "license": "MIT",
+  "homepage": "https://hozihoo.github.io/vue-simple-popups/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hozihoo/vue-simple-popups.git"
+  },
+  "packageManager": "pnpm@10.15.1",
+  "devDependencies": {
+    "vue": "^3.5.21"
+  },
+  "peerDependencies": {
+    "vue": "^3.5.21"
+  }
+}
