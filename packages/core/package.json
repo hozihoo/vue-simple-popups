@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-popups",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Lightweight & Efficient Vue 3 Popup Component Library",
   "type": "module",
   "main": "./dist/vue-simple-popups.cjs.js",

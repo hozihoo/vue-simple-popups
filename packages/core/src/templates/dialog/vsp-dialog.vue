@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { X } from "lucide-vue-next";
 
-defineProps<{
+const props = defineProps<{
   title: string;
   content: string;
+  confirmButtonText?: string;
+  cancelButtonText?: string;
 }>();
 
 defineEmits<{
@@ -35,13 +37,13 @@ defineEmits<{
         class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100 transition-colors"
         @click="$emit('cancel')"
       >
-        取消
+        {{ $props.cancelButtonText || "取消" }}
       </button>
       <button
         class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary/90 transition-colors"
         @click="$emit('confirm', true)"
       >
-        确认
+        {{ $props.confirmButtonText || "确定" }}
       </button>
     </div>
   </div>
